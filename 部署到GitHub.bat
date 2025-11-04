@@ -114,16 +114,18 @@ echo.
 git push -u origin main
 if errorlevel 1 (
     echo.
-    echo ❌ 推送失败！
+    echo Push Failed!
     echo.
-    echo 💡 可能的原因：
-    echo    1. 网络问题 - 检查网络连接
-    echo    2. 权限问题 - 确认你有仓库的写入权限
-    echo    3. 需要登录 - 首次使用可能需要登录 GitHub
+    echo Possible reasons:
+    echo    1. Network issue - GitHub connection was reset
+    echo    2. Permission issue - Check repository access
+    echo    3. Need login - First time use may require GitHub login
     echo.
-    echo 💡 解决方法：
-    echo    1. 使用 GitHub Desktop（更简单）
-    echo    2. 或配置 Git 凭证
+    echo Solutions:
+    echo    1. Use web upload method (see quick-start guide^)
+    echo    2. Try again with stable network
+    echo    3. Use GitHub Desktop
+    echo    4. Configure Git proxy if needed
     echo.
     pause
     exit /b 1
